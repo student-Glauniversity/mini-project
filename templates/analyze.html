@@ -1,0 +1,21 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Email Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Customer Email Analysis</h1>
+
+    <form action="/dashboard" method="post">
+        <textarea name="email" placeholder="Paste customer email here..." required></textarea>
+        <button type="submit">Analyze</button>
+    </form>
+</div>
+
+</body>
+</html>

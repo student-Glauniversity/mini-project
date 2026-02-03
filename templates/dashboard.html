@@ -4,21 +4,24 @@
 <html>
 <head>
     <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="result-box">
+    
+    <div class="container">
+    <h1>Email Analysis Result</h1>
+
     <p><b>Email:</b> {{ email }}</p>
     <p><b>Category:</b> {{ category }}</p>
     <p><b>Sentiment:</b> {{ sentiment }}</p>
     <p><b>Priority:</b> {{ priority }}</p>
     <p><b>Auto Reply:</b> {{ reply }}</p>
-</div>
-    <!-- <h2>Email Analysis Result</h2>
-    <p><b>Email:</b> {{ email }}</p>
-    <p><b>Category:</b> {{ category }}</p>
-    <p><b>Sentiment:</b> {{ sentiment }}</p> -->
 
-    <a href="/">Analyze Another Email</a>
+    <a href="/" style="display:block;text-align:center;margin-top:15px;color:#667eea;">
+    Analyze Another Email
+</a>
+</div>
+    
 </body>
 </html>
 
