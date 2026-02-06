@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Intelligence System</title>
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Email Intelligence</div>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/analyze">Analyze</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/login">Login</a></li>
+    </ul>
+</nav>
+
+<main class="page">
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    © 2026 Email Intelligence System | AI Powered
+</footer>
+
+</body>
+</html>

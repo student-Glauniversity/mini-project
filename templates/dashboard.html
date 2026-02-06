@@ -1,27 +1,37 @@
-<!-- <p><b>Priority:</b> {{ priority }}</p>
-<p><b>Auto Reply:</b> {{ reply }}</p> -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Result</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    
-    <div class="container">
-    <h1>Email Analysis Result</h1>
+{% extends "base.html" %}
 
-    <p><b>Email:</b> {{ email }}</p>
-    <p><b>Category:</b> {{ category }}</p>
-    <p><b>Sentiment:</b> {{ sentiment }}</p>
-    <p><b>Priority:</b> {{ priority }}</p>
-    <p><b>Auto Reply:</b> {{ reply }}</p>
+{% block content %}
+<div class="dashboard-card">
 
-    <a href="/" style="display:block;text-align:center;margin-top:15px;color:#667eea;">
+    <h2>Email Analysis Result</h2>
+
+    <div class="result-row">
+        <span>Email:</span>
+        <span>{{ email }}</span>
+    </div>
+
+    <div class="result-row">
+        <span>Category:</span>
+        <span>{{ category }}</span>
+    </div>
+
+    <div class="result-row">
+        <span>Sentiment:</span>
+        <span>{{ sentiment }}</span>
+    </div>
+
+    <div class="result-row priority">
+        <span>Priority:</span>
+        <span>{{ priority }}</span>
+    </div>
+
+    <div class="reply-box">
+        <h4>Auto Generated Reply</h4>
+        <p>{{ reply }}</p>
+    </div>
+
+    <a href="{{ url_for('analyze') }}" class="btn">
     Analyze Another Email
 </a>
 </div>
-    
-</body>
-</html>
-
+{% endblock %}
